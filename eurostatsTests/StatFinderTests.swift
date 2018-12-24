@@ -22,6 +22,7 @@ class StatFinderTests: XCTestCase {
     
     // exports, total, us, 2008
     XCTAssertEqual(finder.value(index: [1, 7, 10, 6]), 883_804.0)
+    XCTAssertEqual(finder.status(index: [1, 7, 10, 6]), nil)
   }
   
   // MARK: - Helpers
