@@ -4,11 +4,11 @@ struct StatExtension: Codable {
   
   let datasetId: String
   let lang: String
-  let status: StatStatus
+  let status: StatStatusExtension?
   
 }
 
-struct StatStatus: Codable {
+struct StatStatusExtension: Codable {
   
   let label: [String: String]
   
@@ -39,8 +39,8 @@ struct StatData: Codable {
   let id: [String]
   let size: [Int]
   
-  let status: [String: String]
-  let value: [String: Int]
+  let status: [String: String]?
+  let value: [String: Double]
   
   let dimension: [String: StatDimension]
   
